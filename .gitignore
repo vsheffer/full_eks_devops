@@ -1,0 +1,6 @@
+**/*.terraform*
+.vagrant
+.aws/
+secrets/
+**/*.secrets.yaml
+**/*.IGNORE

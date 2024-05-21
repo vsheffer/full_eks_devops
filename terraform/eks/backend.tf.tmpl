@@ -1,0 +1,7 @@
+terraform {
+  backend "s3" {
+    bucket = "<your bucket name>"
+    key    = "<some path>"
+    region = "<the region where your bucket is>"
+  }
+}

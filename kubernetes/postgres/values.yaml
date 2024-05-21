@@ -1,0 +1,14 @@
+image:
+  repository: vsheffer/postgresql-16-pgvector
+  tag: latest
+
+architecture: standalone
+global:
+  postgresql:
+    auth:
+      postgresPassword: thisispostgres
+primary:
+  persistence:
+    enabled: true
+    size: 40Gi
+    existingClaim: "data-postgresql"

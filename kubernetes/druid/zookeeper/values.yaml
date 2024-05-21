@@ -1,0 +1,7 @@
+global:
+  storageClass: "gp2"
+ 
+fullnameOverride: "zookeeper"
+replicaCount: 3
+persistence:
+  size: 8Gi

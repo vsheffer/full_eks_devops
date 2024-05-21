@@ -1,0 +1,13 @@
+FROM docker.io/bitnami/postgresql:16.2.0-debian-12-r12
+
+USER 0
+RUN apt update -y && \
+    apt install build-essential git -y && \
+    cd /tmp && \
+    git clone --branch v0.6.2 https://github.com/pgvector/pgvector.git && \
+    cd pgvector && \
+    make && make install && \
+    cd .. && rm -rf pgvector && \
+    apt remove --purge build-essential git -y && \
+    apt clean
+USER 1001
